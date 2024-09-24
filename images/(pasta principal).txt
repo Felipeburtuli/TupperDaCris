@@ -1,0 +1,7 @@
+/ (pasta principal)
+   ├── index.html
+   ├── style.css
+   └── images/
+       ├── garrafa.jpg
+       ├── potes.jpg
+       └── acessorios.jpg

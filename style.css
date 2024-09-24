@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://img.freepik.com/fotos-premium/flores-de-primavera-retratadas-em-um-fundo-plano-com-espaco-para-texto_757246-1052.jpg') no-repeat center center fixed; /* Nova URL da imagem floral */
+    background-size: cover; /* Altere para 'cover' para que a imagem cubra toda a tela */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(255, 153, 204, 0.9); /* Cor com transparência */
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 15px 15px; /* Cantos arredondados */
+}
+
+h1 {
+    color: white;
+    font-size: 3.5em; /* Aumentar o tamanho do título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque */
+}
+
+/* Centralizar as categorias no meio da página */
+.category-selection {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: stretch; /* Permitir que as abas tenham a mesma altura */
+    height: calc(100vh - 250px); /* Ajusta o espaço disponível entre header e footer */
+    gap: 30px; /* Espaçamento entre as abas */
+}
+
+.category {
+    text-align: center;
+    flex: 1; /* Faz cada aba ocupar a mesma quantidade de espaço */
+    max-width: 250px; /* Define uma largura máxima para as abas */
+    display: flex; /* Para que a imagem e o texto possam ser centralizados */
+    flex-direction: column; /* Coloca o texto embaixo da imagem */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+.image-container {
+    position: relative;
+    width: 100%; /* Faz a imagem ocupar 100% da largura da categoria */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+    border-radius: 15px; /* Cantos arredondados */
+    overflow: hidden; /* Para esconder qualquer parte da imagem que ultrapasse os limites */
+    transition: transform 0.3s; /* Transição suave */
+}
+
+.image-container img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do container */
+    height: auto;
+    border-radius: 15px; /* Cantos arredondados na imagem */
+}
+
+.image-container:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.category a {
+    text-decoration: none;
+}
+
+/* Seções dos produtos ocultas até serem selecionadas */
+.content section {
+    display: none;
+}
+
+#garrafas:target,
+#potes:target,
+#acessorios:target {
+    display: block;
+    padding: 20px;
+}
+
+.products {
+    list-style-type: none;
+    padding: 0;
+}
+
+.products li {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ff99cc;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Rodapé sempre na parte inferior */
+footer {
+    background-color: rgba(255, 153, 204, 0.9); /* Cor com transparência */
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Fixa o footer no final da página */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-radius: 15px 15px 0 0; /* Cantos arredondados */
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
